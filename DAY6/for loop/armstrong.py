@@ -29,7 +29,7 @@ else:
 
 while n>0:
    rem = n%10
-   sum = sum + rem**l
+   sum = sum + rem**
    n = n//10
 print(sum)   
 if sum == temp:

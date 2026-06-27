@@ -18,6 +18,7 @@ for i in range(1,power+1,+1):
    print (product)
 print("power of the given number is:",product)
 
+
 #while loop
 
 pro = 1
