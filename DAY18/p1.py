@@ -19,24 +19,35 @@ Valid Username
 '''
 
 n = input("Enter username:")
+
 letter = 0
 digits = 0
 space = 0
 underscore = 0
+
 for i  in range(len(n)):
+
     ch = n[i]
+
     if  ch>='a' and ch<='z':
         letter=1
+
     elif ch>='0' and ch<='9':
         digits=1
+
     elif ch == " ":
         space =1
+
     elif ch == "_":
         underscore =1
+
     else:
         print("InValid Username") 
+
+
 if len(n)>=5 and len(n)<=12 and letter == 1 and digits == 1 and space== 0 and underscore == 1:
       print("Valid Username")
+      
 else:
       print("InValid Username")
 

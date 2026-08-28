@@ -20,11 +20,15 @@ Not a Palindrome Code
 '''
 n =input("Enter product code:")
 result = ""
+
 for i in range(-1,-(len(n)+1),-1):
     result+= n[i]
+
 print(result)
+
 if n == result:
    print("Palindrome Code")
+   
 else:
    print("Not a Palindrome Code")
 

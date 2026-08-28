@@ -15,19 +15,32 @@ Enter Employee ID: EMP10234
 Output:
 Valid Employee ID
 
+
 '''
 n = input("Enter Employee ID :")
 result = ""
 count = 0
+
 for i in range(0,3):
     result+=n[i] 
+
 print(result)
+
 for i in range(3,len(n)):
+
     if n[i]>="0" and n[i]<="9":
-        count=1
+        count = 1
+
+    else:
+        count = 0
+        break
+
 print(count)
+
+
 if len(n)==8 and count==1 and result == "EMP":
     print("Valid Employee ID")
+
 else:
     print("INValid Employee ID")
 

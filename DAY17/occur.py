@@ -13,6 +13,6 @@ m = input("Enter string:")
 
 count = 0
 for i in n:
-    if i== m:
+    if i == m:
         count+=1
 print(count)

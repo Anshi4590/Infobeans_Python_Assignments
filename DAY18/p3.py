@@ -11,11 +11,21 @@ Output:
 Total words: 5
 
 '''
-n = input("Enter Complaint: ")
-count=0
-for index in range(len(n)):
-  if n[index]==" ":
-     count+=1
-print(count+1)
 
+message = input("Enter complaint: ")
+
+count = 0
+in_word = False
+
+for char in message:
+    
+    if char != " ":
+        if in_word == False:
+            count += 1
+            in_word = True
+            
+    else:
+        in_word = False
+
+print("Total words:", count)
  

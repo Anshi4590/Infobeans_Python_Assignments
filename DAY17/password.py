@@ -38,6 +38,7 @@ for i in range(len(n)):
          space = 1
       else:
          special =1
+         
 if len(n)>=8 and len(n)<=15 and upper ==1 and lower==1 and number== 1 and space == 0 and special == 1:
    print("Secured password")
 else:
