@@ -34,8 +34,10 @@ Only one valid answer exists.'''
 
 arr = list(map(int,input("Enter number:").split(" ")))
 print(arr)
+
 target = int(input("Enter target sum:"))
 ans = []
+
 for i in range(len(arr)):
 
     for j in range(i+1,len(arr)):
@@ -45,6 +47,7 @@ for i in range(len(arr)):
            ans.append(j)
            break
     break
+
 print(ans)
 if len(ans)==0:
     print(-1)

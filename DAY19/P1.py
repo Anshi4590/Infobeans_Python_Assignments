@@ -11,8 +11,11 @@ Output: Masked Account: ********9012
 
 '''
 n = input("Enter string")
+
 for i in range(0,len(n)):
+  
   if i<len(n)-4:
       print("*",end="")
+      
   else:
       print(n[i],end="")

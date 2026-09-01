@@ -10,14 +10,17 @@ Output: Encrypted Message: avaj si lufrewop
 '''
 n = input("Enter Message:")
 words = (n.split())
+
 print(words)
 
 for i in range(0,len(words)):
     w = words[i]
     
     result = ""
+
     for j in range(len(w)-1,-1,-1):
         result+=w[j]
+
     print(result,end=" ")
 
 

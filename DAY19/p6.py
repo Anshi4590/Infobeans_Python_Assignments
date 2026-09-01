@@ -35,12 +35,16 @@ alphabet=""
 digit=""
 
 for i in n:
+
     if i >='a'and i<='z' or i>='A' and i<='Z':
         i=i.lower()
+
         if i not in alphabet:
             alphabet+=i
+
     elif i>='0'and i<='9':
        digit+=i
+       
     else:
        continue
 
