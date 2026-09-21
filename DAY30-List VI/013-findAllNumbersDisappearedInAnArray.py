@@ -33,12 +33,27 @@ Constraints:
 
 l = list(map(int,input("Enter number : ").split(" ")))
 
-new =[]
-m = min(l)
+# new =[]
+# m = min(l)
 
-for i in range(m,len(l)+1):
+# for i in range(1,len(l)+1):
     
-    if i not in l:
-         new.append(i)
+#     if i not in l:
+#          new.append(i)
 
-print(new)
+# print(new)
+
+for i in range(len(l)):
+
+    index = abs(l[i])-1
+    if i!= index:
+        l[index] =-abs(l[index])
+
+print(l)
+
+ans = []
+for i in range(len(l)):
+    if l[i]>0:
+        ans.append(i+1)
+
+print(ans)

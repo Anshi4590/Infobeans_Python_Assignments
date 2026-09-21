@@ -34,13 +34,13 @@ The first five enumsements of nums shounumsd be [0, 1, 3, 0, 4].
 nums = list(map(int,input("Enter number : ").split(" ")))
 val = int(input("Enter value : "))
 
-# count = 0
+count = 0
 
-# for i in nums:
-#     if i!= val:
-#         count+=1
+for i in nums:
+    if i!= val:
+        count+=1
 
-# print(count)
+print(count)
 
 # using two pointer method 
 i = 0

@@ -36,18 +36,42 @@ arr = list(map(int,input("Enter number:").split(" ")))
 print(arr)
 
 target = int(input("Enter target sum:"))
-ans = []
+# ans = []
+
+# for i in range(len(arr)):
+
+#     for j in range(i+1,len(arr)):
+
+#         if arr[i] + arr[j] == target:
+#            ans.append(i)
+#            ans.append(j)
+#            break
+#     break
+
+# print(ans)
+# if len(ans)==0:
+#     print(-1)
+
+
+#Optimized solution
+found = False
+hashmap = {}
 
 for i in range(len(arr)):
 
-    for j in range(i+1,len(arr)):
+    complement = target - arr[i]
 
-        if arr[i] + arr[j] == target:
-           ans.append(i)
-           ans.append(j)
-           break
-    break
 
-print(ans)
-if len(ans)==0:
-    print(-1)
+    if complement in hashmap:
+        print(hashmap[complement],i)
+        found = True
+
+    else:
+        hashmap[arr[i]] = i
+
+if not found:
+    print("not found")
+
+
+
+

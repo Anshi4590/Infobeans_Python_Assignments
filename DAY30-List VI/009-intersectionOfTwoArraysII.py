@@ -47,14 +47,46 @@ num2=list(map(int,input("Enter : ").split()))
 
 
 
-ans=[]
-visit=[False]*len(num2)
-# print(visit)
-for i in num1:
-    for j in range(len(num2)):
-        if i==num2[j] and visit[j]==False:
-            ans.append(i)
-            visit[j]=True
-            break
+# ans=[]
+# visit=[False]*len(num2)
+# # print(visit)
+# for i in num1:
+#     for j in range(len(num2)):
+#         if i==num2[j] and visit[j]==False:
+#             ans.append(i)
+#             visit[j]=True
+#             break
     
+# print(ans)
+
+
+#using maps 
+
+map = {}
+
+for i in  num2:
+    map[i] = map.get(i,0)
+
+print(map)
+ans = []
+
+for i in num1:
+    if i in map and map [i]>0:
+        ans.append(i)
+        map[i]-=1
+
 print(ans)
+
+'''
+algo 
+Create an empty frequency dictionary.
+Traverse num2.
+Store each number's frequency in the dictionary.
+Create an empty ans list.
+Traverse num1.
+Check whether the number exists in the dictionary and its frequency is greater than 0.
+If yes, add the number to ans.
+Decrease its frequency by 1.
+Continue until num1 is completely traversed.
+Return/print ans
+'''

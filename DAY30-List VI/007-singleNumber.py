@@ -34,6 +34,6 @@ l = list(map(int,input("Enter number : ").split(" ")))
 
 ans = 0
 for i in l:
-   ans^=i
+   ans^=i #same =0 and different =1
 
 print(ans)

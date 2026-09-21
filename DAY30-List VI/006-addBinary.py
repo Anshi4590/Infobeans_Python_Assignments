@@ -31,3 +31,45 @@ Constraints:
 - a and b consist only of '0' or '1'.
 - Each string does not contain leading zeros except for "0".
 '''
+s1 = input("Enter 1st binary :")
+s2 = input("Enter 2nd binary :")
+
+i = 1
+j =1
+carry =0
+
+ans =" "
+while i<=len(s1) or j<=len(s2) or carry!=0:
+    #yha error nhi ay toh if else lagy hai
+
+    if i<=len(s1):
+        a = int(s1[-i]) #1010 - 0
+    else:
+        a =0
+    if j<=len(s2):
+        b = int(s2[-j]) #1011 - 1
+    else:
+            b =0
+    
+        
+    sum =a +b+carry #0+1+0 -1
+    #print(sum)
+
+    ans +=str(sum%2)#1%2 -1 #2%2 ==0
+    carry = sum//2 #1//2 -0
+    print(f"carry {carry}")
+
+    i+=1
+    j+=1
+
+    print(ans[::-1])
+
+
+#    Algo
+#    right - left add karo
+#    total = a+b+carry
+#    total %2 - current binary  digit
+#    total//2-carry dono strings khatam hone tak loop chaloo
+#    last mein carry bhi process karo
+
+#    revere - built answer ko ans[::-1] se reverse karo
