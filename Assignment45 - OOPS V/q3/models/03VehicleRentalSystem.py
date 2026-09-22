@@ -152,7 +152,7 @@ class Car(Vehicle):
         return self.__rent_per_day*days
 
 
-class Bike(Vehicle):
+class Bike(Vehicle) :
 
     def __init__(self, vehicle_number, brand, rent_per_day, engine_cc):
         super().__init__(vehicle_number, brand, rent_per_day)
