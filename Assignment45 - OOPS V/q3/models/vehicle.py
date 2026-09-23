@@ -118,7 +118,7 @@ class Vehicle:
     @rent_per_day.setter
     def rent_per_day(self, value):
 
-        if self.__rent_per_day>0:
+        if value>0:
            self.__rent_per_day = value
 
     @rent_per_day.deleter
@@ -131,6 +131,7 @@ class Vehicle:
         print(f"Rent             : {self.__rent_per_day}")
 
     def calculate_rent(self, days):
+        
         print(f"Total Rent:   {self.__rent_per_day*days}")
 
 
@@ -143,26 +144,27 @@ class Car(Vehicle):
 
         
     def display_vehicle(self):
-        super().display_vehicle(self)
+        super().display_vehicle()
+        print("Vehicle Type     : Car ")
         print(f"Number of seats : {self.number_of_seats}")
        
 
     def calculate_rent(self, days):
         
-        return self.__rent_per_day*days
+        super().calculate_rent(days)
 
 
 class Bike(Vehicle) :
 
-    def __init__(self, vehicle_number, brand, rent_per_day, engine_cc):
+    def __init__(self,vehicle_number, brand, rent_per_day, engine_cc,days):
         super().__init__(vehicle_number, brand, rent_per_day)
         self.engine_cc = engine_cc
-        
+        self.days = days 
 
     def display_vehicle(self):
-        super().display_vehicle(self)
+        super().display_vehicle()
         print(f"Engine CC : {self.engine_cc}")
 
-    def calculate_rent(self, days):
-        return self.__rent_per_day*days
+    def calculate_rent(self):
+        super().calculate_rent(self.days)
         
