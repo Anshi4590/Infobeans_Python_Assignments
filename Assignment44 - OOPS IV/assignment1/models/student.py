@@ -19,7 +19,7 @@ TASKS:
 2. Create a Student object for each student.
 3. Store all Student objects inside a list.
 4. Display all students.
-5. Display students whose marks are greater than 60.
+5. Display students whose marks are greater than 60. 
 6. Find the student having the highest marks.
 7. Calculate the average marks of all students.
 
@@ -68,4 +68,35 @@ Average Marks:
 '''
 
 class Student :
-    pass
+
+    def __init__(self,rollno,name,marks):
+        self.rollno = rollno
+        self.name = name 
+        self.marks = marks
+
+    # def display_details(self,studentlist):
+
+    #     print("All Student")
+    #     for s in studentlist:
+    #         print(s.rollno, s.name, s.marks)
+
+    def display_details(self):
+        print(f"{self.rollno} {self.name} {self.marks}")
+
+
+
+    def search_marks(self):
+        return self.marks>=60
+
+    def  highest_marks(self,other):
+        return self.marks>other.marks
+
+    @staticmethod
+    def average(student):
+
+        total =0
+        for i in student:
+            total+=i.marks
+
+        average = total/len(student)
+        return average

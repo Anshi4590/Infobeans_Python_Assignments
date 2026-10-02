@@ -13,7 +13,7 @@ if len(s1) == len(s2):
             break
     if flag == 0:
        print("Anagram")
-    else:
-       print("Anagram")
+  
 else:
     print("Not a Anagram")
+    

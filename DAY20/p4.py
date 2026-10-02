@@ -27,6 +27,7 @@ is
 n = input("Enter string:")
 w = n.split()
 shortest = w[0]
+
 for i in range(1,len(w)):
     if len(w[i])<len(shortest):
        shortest = w[i]

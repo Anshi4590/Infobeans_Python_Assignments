@@ -41,7 +41,7 @@ TASKS:
 2. Create a Student object for each student.
 3. Store all Student objects inside a list.
 4. Display all students.
-5. Display students whose marks are greater than 60.
+5.============================================================ Display students whose marks are greater than 60.
 6. Find the student having the highest marks.
 7. Calculate the average marks of all students.
 
@@ -149,7 +149,7 @@ Total Salary:
 Average Salary:
 44000
 
-============================================================
+
 ASSIGNMENT 3 – PRODUCT INVENTORY SYSTEM
 =======================================
 

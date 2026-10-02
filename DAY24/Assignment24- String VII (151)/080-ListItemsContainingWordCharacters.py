@@ -4,7 +4,8 @@
 
 List = ["apple", "plea"], 
 
-Word = "pal" "apple", "plea"
+Word = "pal" 
+"apple", "plea"
 
 '''
 

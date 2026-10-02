@@ -10,7 +10,7 @@ sub = ""
 long = 0
 
 for i in range(len(s)):
-    temp =""
+    temp = ""
 
     for j in range(i,len(s)//2):
 
