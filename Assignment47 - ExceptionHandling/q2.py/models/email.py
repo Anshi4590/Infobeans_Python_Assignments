@@ -19,8 +19,7 @@ def validateemail(email):
     if email.count(".")!=1:
 
         raise DotException("Invalid Dot usage")
-
-    domain = email.split(".")[-1]
+ 
     if domain not in ["com","in","net","biz"]:
 
         raise DomainException("Invalid Domain")

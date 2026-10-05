@@ -24,12 +24,13 @@ Output
 '''
 
 def nthfibonachi(n):
-    if (n == 1):
-       return 1
-    if n == 0:
-       return 0
+   if n == 1:
+      return 0
+   if n == 2:
+      return 1
 
-    return nthfibonachi(n-1) + nthfibonachi(n-2)
+   return nthfibonachi(n-1) + nthfibonachi(n-2)
 
 n = int(input("Enter Number : "))
-print(nthfibonachi(n))
+for i in range(1,n+1):
+   print(nthfibonachi(i))
